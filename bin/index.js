@@ -16,7 +16,7 @@ program
     console.log("-----------------------");
     console.log("     ", "ORDER", "     ");
     console.log("-----------------------");
-    order(args);
+    console.log(...order(args));
   });
 
 program
@@ -26,7 +26,7 @@ program
     console.log("-----------------------");
     console.log("    ", "CAKE LIST", "    ");
     console.log("-----------------------");
-    renderCakes();
+    console.log(...renderCakes());
   });
 
 program.parse(process.argv);
