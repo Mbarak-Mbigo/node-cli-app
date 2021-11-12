@@ -12,11 +12,12 @@ program
   .option("-t, --type <cake-type>", "specify the type of cake") // type is required
   .option("-s, --size", "specify size of the cake", "medium") // medium default size
   .option("-T, --topping [cake-topping]", "specify cake topping")
-  .action((args) => {
+  .action(async (args) => {
     console.log("-----------------------");
     console.log("     ", "ORDER", "     ");
     console.log("-----------------------");
-    console.log(...order(args));
+    // console.log(...order.commanderOrder(args));
+    console.log(...(await order.inQuirerOder()));
   });
 
 program
@@ -30,3 +31,5 @@ program
   });
 
 program.parse(process.argv);
+
+// console.log(process.argv);

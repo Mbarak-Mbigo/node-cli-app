@@ -12,6 +12,6 @@ const result = [
   "\n3:topping => Nuts",
 ];
 
-test("Maps properties correctly", () => {
-  expect(order(orderObj)).toEqual(result);
+test("Maps properties correctly - commander", () => {
+  expect(order.commanderOrder(orderObj)).toEqual(result);
 });
